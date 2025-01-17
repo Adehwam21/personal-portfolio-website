@@ -1,8 +1,14 @@
 import React from "react";
+import SocialsBar from "../../components/SocialsBar";
 
 const Hero: React.FC = () => {
   return (
     <div className="h-[#60rem] pt:16 md:pt-14 flex items-center justify-center bg-gradient-to-r from-gray-100 via-gray-200 to-gray-300 dark:from-gray-800 dark:via-gray-900 dark:to-black text-gray-800 dark:text-gray-100">
+      {/* Socials Bar */}
+      <div>
+        <SocialsBar className="absolute left-0 top-64 hidden lg:flex flex-col items-center" />
+      </div>
+      {/* Hero Content */}
       <div className="h-full text-center item-center justify-center px-6 py-16">
         {/* Portrait */}
         <div className="w-40 h-40 mx-auto mt-10 md:mt-0 mb-6 md:w-60 md:h-60 md:mb-4">
