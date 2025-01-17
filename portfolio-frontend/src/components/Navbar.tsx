@@ -21,13 +21,16 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className="flex text-base font-bold justify-between border-transparent shadow-lg mb-5 px-10 h-16 items-center">
-      <div className="flex space-x-8 items-center">
+      <div className="flex space-x-6 items-center">
         {/* Brand Name */}
         <Link to="/" className="text-sm font-bold px-4 py-2 rounded-md btn-ghost">
           AARON KUDADJIE
         </Link>
         {/* Theme Toggle Button */}
-        <Button className="btn btn-ghost text-xl" onClick={toggleTheme}>
+        <Button 
+          className={`btn btn-ghost ${theme === 'light' ? 'border border-black' : 'border border-white'} text-xl`}
+          onClick={toggleTheme}
+        >
           {theme === 'light' ? <AiOutlineMoon /> : <AiOutlineSun />}
         </Button>
       </div>
