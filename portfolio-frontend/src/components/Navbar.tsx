@@ -11,10 +11,10 @@ const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const links = [
-    { label: "HOME", href: "/" },
-    { label: "PROJECTS", href: "/project" },
-    { label: "ABOUT", href: "/about" },
-    { label: "CONTACT", href: "/contact" },
+    { label: "HOME", href: "/#home-hero-section" },
+    { label: "ABOUT", href: "/#home-about-section" },
+    { label: "PROJECTS", href: "/#project" },
+    { label: "CONTACT", href: "/#contact" },
   ];
 
   const toggleTheme = () => {
@@ -28,11 +28,11 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="flex text-base top-0 font-bold justify-between border-transparent shadow-lg mb-6 px-10 h-20 items-center">
+    <nav className="fixed w-full flex text-base top-0 right-0 z-50 font-bold justify-between bg-white shadow-lg px-10 h-20 items-center dark:bg-slate-800">
       {/* Left Section */}
       <div className="flex space-x-4 items-center">
         {/* Brand Name */}
-        <Link to="/" className="text-sm font-bold px-4 py-2 rounded-md btn-ghost">
+        <Link to="#home-hero-section" className="text-sm font-bold px-4 py-2 rounded-md btn-ghost">
           AARON KUDADJIE
         </Link>
 
