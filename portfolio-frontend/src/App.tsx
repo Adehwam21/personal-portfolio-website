@@ -1,14 +1,14 @@
-import React from 'react'
-import Button from './components/Button';
+import React from 'react';
+import Home from './pages/Home';
 
 const App: React.FC = () => {
   return (
     <div>
-      <Button className={''} onClick={function (): void {
-        throw new Error('Function not implemented.');
-      } } children={"Help Me"}></Button>
+      <section>
+        <Home />
+      </section>
     </div>
   )
 }
 
-export default App;
+export default App
