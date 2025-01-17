@@ -4,7 +4,7 @@ import { IButtonProps } from '../types'
 const Button: React.FC<IButtonProps> = ({className, onClick, children }) => {
   return (
     <button
-      className={`px-4 py-2 rounded-md focus:outline-1 focus:ring-2 focus:ring-offset-2 ${className}`}
+      className={`px-4 py-2 rounded-md ${className}`}
       onClick={onClick}
     >
       {children}
