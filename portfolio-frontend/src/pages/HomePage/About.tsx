@@ -5,7 +5,7 @@ const About: React.FC = () => {
   const tools = [
     "Visual Studio Code", "Git and GitHub", "Docker", "Postman", "Figma"
   ];
-  const skills = ["Python", "Java", "TypeScript", "React", "Node.js", "Express.js", "MongoDB", "PostgreSQL", "Tailwind CSS", "FastApi"
+  const skills = ["Python", "Java", "TypeScript", "React", "Node.js", "Express.js", "MongoDB", "PostgreSQL", "Tailwind CSS", "FastApi", "Spring Boot"
   ];
   return (
     <div className="w-full px-8  flex flex-col justify-center items-center py-16 bg-gradient-to-tr from-white via-gray-50 to-gray-200 dark:from-gray-800 dark:via-gray-900 dark:to-black text-gray-800 dark:text-gray-100">
