@@ -14,7 +14,9 @@ const config: Config = {
         '102': "32rem",
         '105': "33.5rem",
         '110': "43rem",
-        '111': "45rem",
+        '115': "45rem",
+        '120': "50rem",
+        '130': "60rem",
       },
       
       fontFamily: {

@@ -4,11 +4,11 @@ import About from './About'
 
 const HomePage: React.FC = () => {
   return (
-    <div className="flex flex-col min-h-screen relative">
-      <div id='home-hero-section' className="flex-grow">
+    <div className="w-full flex flex-col space-y-0 min-h-screen relative">
+      <div id='home-hero-section'>
           <Hero />
       </div>
-      <div id='home-about-section' className="flex-grow">
+      <div id='home-about-section'>
           <About />
       </div>
     </div>
