@@ -25,6 +25,7 @@ const Card: React.FC<ICardProps> = ({ image, title, description, caseStudyPath }
         <div className="mt-6 md:mt-3">
           <Button
             className="px-6 py-3 text-sm md:text-base font-medium text-white bg-indigo-500 dark:bg-indigo-600 rounded-md hover:bg-indigo-600 dark:hover:bg-indigo-700" 
+            href={caseStudyPath}
           >
             Read More
           </Button>
