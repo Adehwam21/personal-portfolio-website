@@ -1,0 +1,15 @@
+[
+    {
+        "image": "https://images.unsplash.com/photo-1514349687892-e91022a68b1d?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "title": "EchoAlert API",
+        "description": "A FastAPI server that integrates a gunshot detection model with a Telegram bot for real-time alerts.",
+        "caseStudyPath": "/case-study/gunshot-detector-api"
+    },
+    {
+      "image": "/images/mefolio.png",
+      "title": "MeFolio",
+      "description": "A full-stack personal website using React and Node.js with an SMTP server for email communication.",
+      "caseStudyPath": "/case-study/personal-website"
+    }
+  ]
+  
