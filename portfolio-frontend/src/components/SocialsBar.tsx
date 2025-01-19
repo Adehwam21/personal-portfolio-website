@@ -8,9 +8,10 @@ import { FaTelegramPlane } from "react-icons/fa";
 
 interface ISocialsProps {
   className?: string;
+  classNameFooterIcons?: string;
 }
 
-const SocialsBar: React.FC<ISocialsProps> = ({ className }) => {
+const SocialsBar: React.FC<ISocialsProps> = ({ className, classNameFooterIcons }) => {
   const socials = [
     { label: "LinkedIn", href: "https://linkedin.com/in/yourprofile", icon: <FaLinkedinIn /> },
     { label: "Twitter", href: "https://twitter.com/yourprofile", icon: <FaXTwitter /> },
@@ -21,7 +22,7 @@ const SocialsBar: React.FC<ISocialsProps> = ({ className }) => {
   ];
 
   return (
-    <nav className={`hidden bg-white dark:bg-slate-950 lg:flex flex-col items-center ${className}`}>
+    <nav className={`${className}`}>
       {socials.map((social) => (
         <a
           key={social.label}
@@ -29,7 +30,7 @@ const SocialsBar: React.FC<ISocialsProps> = ({ className }) => {
           target="_blank"
           rel="noopener noreferrer"
           aria-label={social.label}
-          className="text-3xl m-1 p-2 rounded text-black hover:bg-gray-200 dark:bg-slate-950 dark:hover:bg-gray-800 dark:text-white transition-colors"
+          className={classNameFooterIcons}
         >
           {social.icon}
         </a>

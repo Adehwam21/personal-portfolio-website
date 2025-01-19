@@ -3,13 +3,16 @@ import SocialsBar from "../../components/SocialsBar";
 
 const Hero: React.FC = () => {
   return (
-    <div className="h-120 pt-20 md:pt-20 md:pb-6 flex items-center justify-center bg-gradient-to-r from-gray-100 via-gray-200 to-gray-300 dark:from-gray-800 dark:via-gray-900 dark:to-black text-gray-800 dark:text-gray-100">
+    <div className="h-120 pt-20 md:pt-16 md:pb-6 flex items-center justify-center bg-gradient-to-r from-gray-100 via-gray-200 to-gray-300 dark:from-gray-800 dark:via-gray-900 dark:to-black text-gray-800 dark:text-gray-100">
       {/* Socials Bar */}
       <div>
-        <SocialsBar className="absolute left-0 top-52 hidden lg:flex flex-col items-center" />
+        <SocialsBar 
+          className="hidden bg-white dark:bg-slate-950 lg:flex flex-col items-center absolute left-0 top-52" 
+          classNameFooterIcons="text-3xl m-1 p-2 rounded text-black hover:bg-gray-200 dark:bg-slate-950 dark:hover:bg-gray-800 dark:text-white transition-colors"
+        />
       </div>
       {/* Hero Content */}
-      <div className="h-full text-center item-center justify-center px-6 py-16">
+      <div className="h-full text-center item-center justify-center px-6 py-5 md:py-16">
         {/* Portrait */}
         <div className="w-56 h-56 mx-auto mt-10 md:mt-0 mb-6 md:w-60 md:h-60 md:mb-4">
           <img
@@ -19,8 +22,8 @@ const Hero: React.FC = () => {
           />
         </div>
         {/* Title */}
-        <h1 className="font-fira text-4xl md:text-5xl font-extrabold tracking-tight leading-snug text-gray-800 dark:text-gray-100">
-          HELLO, I'M AARON KUDADJIE
+        <h1 className="font-scode text-4xl md:text-5xl font-extrabold tracking-tight leading-snug text-gray-800 dark:text-gray-100">
+          HELLO,  I'M  AARON  KUDADJIE
         </h1>
         {/* Subtitle */}
         <p className="mt-6 text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-400">

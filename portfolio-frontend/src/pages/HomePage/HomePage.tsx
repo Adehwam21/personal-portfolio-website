@@ -1,6 +1,8 @@
 import React from 'react'
 import Hero from './Hero'
 import About from './About'
+import Projects from './Projects'
+import Contact from './Contact'
 
 const HomePage: React.FC = () => {
   return (
@@ -10,6 +12,12 @@ const HomePage: React.FC = () => {
       </div>
       <div id='home-about-section'>
           <About />
+      </div>
+      <div id='home-projects-section'>
+          <Projects />
+      </div>
+      <div id='home-contact-section'>
+          <Contact />
       </div>
     </div>
   )
