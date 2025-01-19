@@ -11,3 +11,10 @@ export interface INavMenuProps {
     className?: string;
     children: ReactNode;
 }
+
+export interface ICardProps {
+    image: string; // URL or path to the project image
+    title: string;
+    description: string;
+    caseStudyPath: string; // Path to the case study page
+  }
