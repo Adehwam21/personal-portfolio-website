@@ -18,25 +18,20 @@
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes borderGlow {
+  0% {
+    background-position: 0% 50%;
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    background-position: 100% 50%;
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  100% {
+    background-position: 0% 50%;
   }
 }
 
-.card {
-  padding: 2em;
+.animate-borderGlow {
+  animation: borderGlow 3s linear infinite; /* Smooth glowing effect */
+  background-size: 200% 200%; /* Gradient scaling for smoothness */
 }
 
-.read-the-docs {
-  color: #888;
-}

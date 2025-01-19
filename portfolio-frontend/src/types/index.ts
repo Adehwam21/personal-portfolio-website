@@ -2,8 +2,9 @@ import { ReactNode } from "react";
 
 export interface IButtonProps {
     className?: string;
-    onClick: () => void;
+    onClick?: () => void;
     children: ReactNode;
+    href?: string
 }
 
 export interface INavMenuProps {

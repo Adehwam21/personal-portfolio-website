@@ -1,9 +1,26 @@
 import React from 'react';
 import SocialsBar from './SocialsBar';
+import { motion } from 'framer-motion';
 
 const Footer: React.FC = () => {
     return (
-        <footer className="bg-black px-3 md:px-10 text-gray-300 py-10">
+        <footer className="relative bg-black px-3 md:px-10 text-gray-300 py-10">
+            {/* Light Beam */}
+            <motion.div
+                className="absolute top-0 left-0 w-full h-0.5"
+                animate={{
+                x: ["100%", "-100%"], // Move from right to left
+                }}
+                transition={{
+                repeat: Infinity, // Repeat the animation infinitely
+                duration: 10, // Total duration of the animation
+                ease: "linear", // Smooth transition
+                }}
+                style={{
+                background:
+                    "linear-gradient(90deg, transparent, rgba(255,255,255,0.8), transparent)", // Beam appearance
+                }}
+            />
             {/* First Row */}
             <div className="container md:h-44 md:mt-16 flex md:gap-15 flex-col md:flex-row justify-between md:items-start">
                 {/* Column 1: Name and Info */}

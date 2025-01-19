@@ -1,0 +1,17 @@
+[
+    { "name": "VS Code", "icon": "https://cdn.jsdelivr.net/npm/simple-icons@5.22.0/icons/visualstudiocode/color.svg" },
+    { "name": "Git/GitHub", "icon": "https://cdn.jsdelivr.net/npm/simple-icons@5.22.0/icons/github/color.svg" },
+    { "name": "Docker", "icon": "https://cdn.jsdelivr.net/npm/simple-icons@5.22.0/icons/docker/color.svg" },
+    { "name": "Python", "icon": "https://cdn.jsdelivr.net/npm/simple-icons@5.22.0/icons/python/color.svg" },
+    { "name": "Java", "icon": "https://cdn.jsdelivr.net/npm/simple-icons@5.22.0/icons/java/color.svg" },
+    { "name": "TypeScript", "icon": "https://cdn.jsdelivr.net/npm/simple-icons@5.22.0/icons/typescript/color.svg" },
+    { "name": "React", "icon": "https://cdn.jsdelivr.net/npm/simple-icons@5.22.0/icons/react/color.svg" },
+    { "name": "Node.js", "icon": "https://cdn.jsdelivr.net/npm/simple-icons@5.22.0/icons/node-dot-js/color.svg" },
+    { "name": "Express.js", "icon": "https://cdn.jsdelivr.net/npm/simple-icons@5.22.0/icons/express/color.svg" },
+    { "name": "MongoDB", "icon": "https://cdn.jsdelivr.net/npm/simple-icons@5.22.0/icons/mongodb/color.svg" },
+    { "name": "PostgreSQL", "icon": "https://cdn.jsdelivr.net/npm/simple-icons@5.22.0/icons/postgresql/color.svg" },
+    { "name": "Tailwind CSS", "icon": "https://cdn.jsdelivr.net/npm/simple-icons@5.22.0/icons/tailwindcss/color.svg" },
+    { "name": "HTML5", "icon": "https://cdn.jsdelivr.net/npm/simple-icons@5.22.0/icons/html5/color.svg" },
+    { "name": "CSS3", "icon": "https://cdn.jsdelivr.net/npm/simple-icons@5.22.0/icons/css3/color.svg" },
+    { "name": "JavaScript", "icon": "https://cdn.jsdelivr.net/npm/simple-icons@5.22.0/icons/javascript/color.svg" }
+]

@@ -17,4 +17,22 @@
     color: var(--text-color);
     transition: background-color 0.3s, color 0.3s; /* Smooth transition */
   }
+
+  @keyframes borderGlow {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .animate-borderGlow {
+    animation: borderGlow 3s linear infinite; /* Smooth glowing effect */
+    background-size: 200% 200%; /* Gradient scaling for smoothness */
+  }
+  
   

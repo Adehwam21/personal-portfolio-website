@@ -30,17 +30,16 @@ const Navbar: React.FC = () => {
   return (
     <nav className="fixed w-full flex text-base top-0 right-0 z-50 font-bold justify-between bg-white shadow-lg px-4 md:px-10 h-20 items-center dark:bg-slate-800">
       {/* Left Section */}
-      <div className="flex row space-x-2 items-center">
-
+      <div className="flex md:space-x-3 items-center">
         {/* Logo */}
         <div className="flex btn-ghost rounded-md items-center space-x-2">
-          <Link to="#home-hero-section" className="flex items-center space-x-2 p-2">
+          <Link to="#home-hero-section" className="flex items-center space-x-2 p-2 py-3">
             <img
               src="images/logo.webp"
               alt="logo"
               className="w-10 h-10 object-cover rounded-full border-4- shadow-lg"
             />
-            <span className="text-sm font-bold">AARON KUDADJIE</span>
+            <span className="text-sm font-bold">thekudacode</span>
           </Link>
         </div>
 

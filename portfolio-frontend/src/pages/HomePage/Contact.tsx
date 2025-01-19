@@ -1,8 +1,26 @@
 import React from "react";
+import { motion } from "framer-motion";
+import Button from "../../components/Button";
 
 const Contact: React.FC = () => {
     return (
-        <div className="min-h-screen flex flex-col justify-center items-center px-6 py-16 bg-gradient-to-tr from-gray-100 via-gray-200 to-gray-300 dark:from-gray-800 dark:via-gray-900 dark:to-black text-gray-800 dark:text-gray-100">
+        <div className="relative min-h-screen flex flex-col justify-center items-center px-6 py-16 bg-gradient-to-tr from-gray-100 via-gray-200 to-gray-300 dark:from-gray-800 dark:via-gray-900 dark:to-black text-gray-800 dark:text-gray-100">
+            {/* Light Beam */}
+            <motion.div
+                className="absolute top-0 left-0 w-full h-0.5"
+                animate={{
+                x: ["-100%", "100%"], // Move from left to right
+                }}
+                transition={{
+                repeat: Infinity, // Repeat the animation infinitely
+                duration: 10, // Total duration of the animation
+                ease: "linear", // Smooth transition
+                }}
+                style={{
+                background:
+                    "linear-gradient(90deg, transparent, rgba(255,255,255,0.8), transparent)", // Beam appearance
+                }}
+            />
             {/* Section Title */}
             <div className="text-center mt-12 mb-12">
                 <h2 className="font-scode text-4xl md:text-5xl font-extrabold tracking-tight">
@@ -54,12 +72,11 @@ const Contact: React.FC = () => {
 
                     </div>
                     <div className="mt-6">
-                        <button
-                            type="submit"
-                            className="w-full px-6 py-3 bg-indigo-500 text-white font-medium text-lg rounded-md hover:bg-indigo-600 dark:bg-indigo-600 dark:hover:bg-indigo-700 transition-transform transform hover:scale-105"
+                        <Button
+                            className="w-full px-6 py-3 bg-indigo-500 text-white font-medium text-lg rounded-md hover:bg-indigo-600 dark:bg-indigo-600 dark:hover:bg-indigo-700"
                         >
                             Send Message
-                        </button>
+                        </Button>
                     </div>
                 </form>
             </div>

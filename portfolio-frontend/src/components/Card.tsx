@@ -1,5 +1,6 @@
 import React from "react";
 import { ICardProps } from "../types";
+import Button from "./Button";
 
 const Card: React.FC<ICardProps> = ({ image, title, description, caseStudyPath }) => {
   return (
@@ -22,12 +23,11 @@ const Card: React.FC<ICardProps> = ({ image, title, description, caseStudyPath }
           <p className="mt-4 md:mb-2 text-gray-600 dark:text-gray-300">{description}</p>
         </div>
         <div className="mt-6 md:mt-3">
-          <a
-            href={caseStudyPath}
-            className="px-6 py-3 text-sm md:text-base font-medium text-white bg-indigo-500 dark:bg-indigo-600 rounded-md hover:bg-indigo-600 dark:hover:bg-indigo-700 transition-transform transform hover:scale-105"
+          <Button
+            className="px-6 py-3 text-sm md:text-base font-medium text-white bg-indigo-500 dark:bg-indigo-600 rounded-md hover:bg-indigo-600 dark:hover:bg-indigo-700" 
           >
             Read More
-          </a>
+          </Button>
         </div>
       </div>
     </div>
