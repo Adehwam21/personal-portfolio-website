@@ -18,4 +18,19 @@ export interface ICardProps {
     title: string;
     description: string;
     caseStudyPath?: string; // Path to the case study page
-  }
+}
+
+
+export interface ISocialsProps {
+  className?: string;
+  classNameFooterIcons?: string;
+}
+
+export interface IScrollContextValue {
+  setRef: (key: string, element: HTMLElement) => void;
+  scrollTo: (key: string) => void;
+}
+
+export interface IAnimatorProps{
+    children: ReactNode;
+}

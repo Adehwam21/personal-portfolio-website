@@ -3,6 +3,8 @@ import Hero from './Hero'
 import About from './About'
 import Projects from './Projects'
 import Contact from './Contact'
+import ScrollToTopBtn from '../../components/ScrollToTop'
+import Footer from '../../components/Footer'
 
 const HomePage: React.FC = () => {
   return (
@@ -19,6 +21,10 @@ const HomePage: React.FC = () => {
       <div id='home-contact-section'>
           <Contact />
       </div>
+      <div id='home-contact-section'>
+          <Footer />
+      </div>
+        <ScrollToTopBtn />
     </div>
   )
 }

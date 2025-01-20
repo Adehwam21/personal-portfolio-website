@@ -11,10 +11,10 @@ const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const links = [
-    { label: "HOME", href: "/#home-hero-section" },
-    { label: "ABOUT", href: "/#home-about-section" },
-    { label: "PROJECTS", href: "/#project" },
-    { label: "CONTACT", href: "/#contact" },
+    { label: "HOME", href: "/" },
+    { label: "ABOUT", href: "/about" },
+    { label: "PROJECTS", href: "/projects" },
+    { label: "CONTACT", href: "/contact" },
   ];
 
   const toggleTheme = () => {
@@ -33,19 +33,19 @@ const Navbar: React.FC = () => {
       <div className="flex md:space-x-3 items-center">
         {/* Logo */}
         <div className="flex btn-ghost rounded-md items-center space-x-2">
-          <Link to="#home-hero-section" className="flex items-center space-x-2 p-2 py-3">
+          <Link to="/" className="flex items-center space-x-2 p-2 py-3">
             <img
               src="images/logo.webp"
               alt="logo"
-              className="w-10 h-10 object-cover rounded-full border-4- shadow-lg"
+              className="w-8 h-8 object-cover rounded-full border-4- shadow-lg"
             />
-            <span className="text-sm font-bold">thekudacode</span>
+            <span className="text-sm font-fira font-bold">TheKudaCode</span>
           </Link>
         </div>
 
         {/* Theme Toggle Button */}
         <Button
-          className={`btn btn-ghost rounded-full text-2xl`}
+          className={`btn btn-ghost rounded-full text-xl`}
           onClick={toggleTheme}
         >
           {theme === "light" ? <AiOutlineMoon /> : <AiOutlineSun />}

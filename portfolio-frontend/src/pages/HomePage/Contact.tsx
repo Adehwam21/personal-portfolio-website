@@ -1,10 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import Button from "../../components/Button";
+import { useScroll } from "../../context/ScrollContext";
 
 const Contact: React.FC = () => {
+    const { setRef } = useScroll();
+
+    useEffect(() => {
+      const element = document.getElementById('contact-section');
+      setRef('contact-section', element!);
+    }, [setRef]);
+    
     return (
-        <div className="relative min-h-screen flex flex-col justify-center items-center px-6 py-16 bg-gradient-to-tr from-gray-100 via-gray-200 to-gray-300 dark:from-gray-800 dark:via-gray-900 dark:to-black text-gray-800 dark:text-gray-100">
+        <div id="contact-section" className="relative min-h-screen flex flex-col justify-center items-center px-6 py-16 bg-gradient-to-tr from-gray-100 via-gray-200 to-gray-300 dark:from-gray-800 dark:via-gray-900 dark:to-black text-gray-800 dark:text-gray-100">
             {/* Light Beam */}
             <motion.div
                 className="absolute top-0 left-0 w-full h-0.5"
