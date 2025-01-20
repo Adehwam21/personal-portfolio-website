@@ -25,7 +25,7 @@ const Footer: React.FC = () => {
             <div className="container md:h-44 md:mt-16 flex md:gap-15 flex-col md:flex-row justify-between md:items-start">
                 {/* Column 1: Name and Info */}
                 <div className="md:w-1/2">
-                    <h3 className="text-2xl p-2 font-bold mb-2 md:mb-4 text-white">Aaron Kudadjie</h3>
+                    <h3 className="text-2xl p-2 font-bold mb-2 md:mb-4 text-white">AARON KUDADJIE</h3>
                     <p className="mb-10 text-gray-400 p-2">
                         A passionate developer with a focus on creating intelligent and efficient solutions for modern problems.
                     </p>
@@ -33,7 +33,7 @@ const Footer: React.FC = () => {
 
                 {/* Column 2: Socials */}
                 <div className="flex flex-col items-start md:items-end md:w-1/2">
-                    <h4 className="text-2xl p-2 font-semibold text-white mb-4">Let's connect</h4>
+                    <h4 className="text-2xl p-2 font-semibold text-white mb-4">SOCIALS</h4>
                     <SocialsBar
                         className="bg-black dark:bg-black flex flex-row md:items-end"
                         classNameFooterIcons="text-2xl p-2 rounded text-white hover:bg-slate-700"

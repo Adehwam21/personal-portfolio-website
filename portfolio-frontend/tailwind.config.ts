@@ -1,4 +1,4 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from 'tailwindcss';
 
 const config: Config = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
@@ -18,11 +18,19 @@ const config: Config = {
         '120': "50rem",
         '130': "60rem",
       },
-      
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
         fira: ['Fira Code', 'monospace'],
         scode: ['Source Code Pro', 'monospace'],
+      },
+      animation: {
+        borderGlow: "borderGlow 2s linear infinite", // Animation name
+      },
+      keyframes: {
+        borderGlow: {
+          "0%, 100%": { borderColor: "rgba(99, 102, 241, 1)" }, // Indigo color
+          "50%": { borderColor: "rgba(59, 130, 246, 1)" }, // Blue color
+        },
       },
     },
   },
@@ -30,6 +38,6 @@ const config: Config = {
     themes: ["light", "dark", "cupcake"],
   },
   plugins: [require('daisyui')],
-   
-}
-export default config
+};
+
+export default config;

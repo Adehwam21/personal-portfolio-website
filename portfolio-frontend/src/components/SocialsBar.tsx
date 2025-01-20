@@ -5,11 +5,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import { FaTelegramPlane } from "react-icons/fa";
 // import { FaDiscord } from "react-icons/fa6";
 // import { FaRedditAlien } from "react-icons/fa";
-
-interface ISocialsProps {
-  className?: string;
-  classNameFooterIcons?: string;
-}
+import { ISocialsProps } from "../types";
 
 const SocialsBar: React.FC<ISocialsProps> = ({ className, classNameFooterIcons }) => {
   const socials = [
