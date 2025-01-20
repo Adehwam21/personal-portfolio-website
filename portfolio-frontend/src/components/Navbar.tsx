@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
 import Button from "./Button";
 import NavMenu from "./NavMenu";
 import { AiOutlineSun, AiOutlineMoon } from "react-icons/ai";
@@ -7,25 +8,32 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { AiOutlineClose } from "react-icons/ai";
 
 const Navbar: React.FC = () => {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState(() => localStorage.getItem("theme") || "light");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const links = [
-    { label: "HOME", href: "/" },
-    { label: "ABOUT", href: "/about" },
-    { label: "PROJECTS", href: "/projects" },
-    { label: "CONTACT", href: "/contact" },
-  ];
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme);
+  }, [theme]);
 
   const toggleTheme = () => {
-    const newTheme = theme === "light" ? "dark" : "light";
-    setTheme(newTheme);
-    document.documentElement.setAttribute("data-theme", newTheme);
+    setTheme((prev) => (prev === "light" ? "dark" : "light"));
   };
 
   const toggleNavMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  const closeNavbar = () => {
+    setIsMenuOpen(false);
+  };
+
+  const links = [
+    { label: "HOME", href: "/", isScroll: false },
+    { label: "ABOUT", href: "about-section", isScroll: true },
+    { label: "PROJECTS", href: "projects-section", isScroll: true },
+    { label: "CONTACT", href: "contact-section", isScroll: true },
+  ];
 
   return (
     <nav className="fixed w-full flex text-base top-0 right-0 z-50 font-bold justify-between bg-white shadow-lg px-4 md:px-10 h-20 items-center dark:bg-slate-800">
@@ -37,7 +45,7 @@ const Navbar: React.FC = () => {
             <img
               src="images/logo.webp"
               alt="logo"
-              className="w-8 h-8 object-cover rounded-full border-4- shadow-lg"
+              className="w-8 h-8 object-cover rounded-full shadow-lg"
             />
             <span className="text-sm font-fira font-bold">TheKudaCode</span>
           </Link>
@@ -45,7 +53,7 @@ const Navbar: React.FC = () => {
 
         {/* Theme Toggle Button */}
         <Button
-          className={`btn btn-ghost rounded-full text-xl`}
+          className="btn btn-ghost rounded-full text-xl"
           onClick={toggleTheme}
         >
           {theme === "light" ? <AiOutlineMoon /> : <AiOutlineSun />}
@@ -54,21 +62,34 @@ const Navbar: React.FC = () => {
 
       {/* Navigation Links (Hidden on Small Screens) */}
       <ul className="hidden md:flex space-x-6">
-        {links.map((link) => (
-          <li key={link.href}>
-            <Link
-              to={link.href}
-              className="text-sm px-4 py-2 rounded-md btn-ghost transition-colors"
-            >
-              {link.label}
-            </Link>
-          </li>
-        ))}
+        {links.map((link) =>
+          link.isScroll ? (
+            <li key={link.href}>
+              <ScrollLink
+                to={link.href}
+                smooth={true}
+                duration={500}
+                className="text-sm px-4 py-2 rounded-md btn-ghost transition-colors cursor-pointer"
+              >
+                {link.label}
+              </ScrollLink>
+            </li>
+          ) : (
+            <li key={link.href}>
+              <Link
+                to={link.href}
+                className="text-sm px-4 py-2 rounded-md btn-ghost transition-colors"
+              >
+                {link.label}
+              </Link>
+            </li>
+          )
+        )}
       </ul>
 
       {/* Hamburger Menu Button (Visible on Small Screens) */}
       <Button
-        className={`btn btn-ghost rounded-full text-2xl md:hidden`}
+        className="btn btn-ghost rounded-full text-2xl md:hidden"
         onClick={toggleNavMenu}
       >
         {isMenuOpen ? <AiOutlineClose /> : <RxHamburgerMenu />}
@@ -83,16 +104,31 @@ const Navbar: React.FC = () => {
           }`}
         >
           <ul className="w-full">
-            {links.map((link) => (
-              <li key={link.href} className="w-full">
-                <Link
-                  to={link.href}
-                  className="block text-end text-sm w-full h-8 px-8 pt-8 pb-12 border-b border-gray-200 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all"
-                >
-                  {link.label}
-                </Link>
-              </li>
-            ))}
+            {links.map((link) =>
+              link.isScroll ? (
+                <li key={link.href} className="w-full">
+                  <ScrollLink
+                    to={link.href}
+                    smooth={true}
+                    duration={500}
+                    className="block text-end text-sm w-full h-8 px-8 pt-8 pb-12 border-b border-gray-200 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all cursor-pointer"
+                    onClick={closeNavbar}
+                  >
+                    {link.label}
+                  </ScrollLink>
+                </li>
+              ) : (
+                <li key={link.href} className="w-full">
+                  <Link
+                    to={link.href}
+                    className="block text-end text-sm w-full h-8 px-8 pt-8 pb-12 border-b border-gray-200 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all"
+                    onClick={closeNavbar}
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              )
+            )}
           </ul>
         </NavMenu>
       )}

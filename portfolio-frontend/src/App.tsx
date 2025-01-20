@@ -3,10 +3,12 @@ import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import HomePage from './pages/HomePage/HomePage';
 import Navbar from './components/Navbar';
 import { ScrollProvider } from './context/ScrollContext';
+import { Toaster } from 'react-hot-toast';
 
 const App: React.FC = () => {
   return (
     <Router>
+      <Toaster position='top-center' toastOptions={{ duration: 5000 }} />
       <ScrollProvider>
         <div className="flex font-poppins flex-col min-h-screen overflow-x-hidden">
           <Navbar />

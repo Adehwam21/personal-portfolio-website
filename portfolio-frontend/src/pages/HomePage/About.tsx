@@ -59,7 +59,7 @@ const About: React.FC = () => {
       />
 
       {/* Section Title */}
-      <div className="text-center mt-8">
+      <div id="about-section" className="text-center mt-8">
         <h2 className="font-scode text-4xl md:text-5xl font-extrabold tracking-tight">
           ABOUT ME
         </h2>

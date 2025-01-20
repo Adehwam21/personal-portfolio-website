@@ -11,7 +11,9 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
+    "@types/axios": "^0.9.36",
     "@types/react-router-dom": "^5.3.3",
+    "axios": "^1.7.9",
     "framer-motion": "^11.18.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -19,6 +21,7 @@
     "react-icons": "^5.4.0",
     "react-intersection-observer": "^9.15.0",
     "react-router-dom": "^7.1.2",
+    "react-scroll": "^1.9.0",
     "tech-stack-icons": "^2.1.0"
   },
   "devDependencies": {
@@ -26,6 +29,7 @@
     "@types/node": "^22.10.7",
     "@types/react": "^18.3.18",
     "@types/react-dom": "^18.3.5",
+    "@types/react-scroll": "^1.8.10",
     "@vitejs/plugin-react": "^4.3.4",
     "autoprefixer": "^10.4.20",
     "daisyui": "^4.12.23",
