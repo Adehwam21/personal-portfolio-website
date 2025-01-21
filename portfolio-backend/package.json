@@ -1,5 +1,5 @@
 {
-  "name": "portfolio-backend",
+  "name": "mefolio-backend",
   "version": "1.0.0",
   "description": "The backend server for my portfolio website,just for handling mail services",
   "main": "server.js",

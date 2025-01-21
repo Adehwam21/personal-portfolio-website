@@ -64,6 +64,7 @@ const Contact: React.FC = () => {
                                 className="w-full mt-2 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
                                 placeholder="Your Name"
                                 aria-label="Name"
+                                required
                             />
                         </div>
                         <div>
@@ -76,6 +77,7 @@ const Contact: React.FC = () => {
                                 className="w-full mt-2 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
                                 placeholder="Your Email"
                                 aria-label="Email"
+                                required
                             />
                         </div>
                     </div>
@@ -89,6 +91,7 @@ const Contact: React.FC = () => {
                             className="w-full h-60 mt-2 px-6 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 resize-none"
                             placeholder="Write your message here..."
                             aria-label="Message"
+                            required
                         ></textarea>
                     </div>
                     <div className="mt-6">
