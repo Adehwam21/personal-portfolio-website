@@ -55,7 +55,7 @@ const Projects: React.FC = () => {
                 ))}
             </div>
 
-            <Button className="mt-8 md:mt-6 w-48 h-16 flex-row px-10 py-4 text-lg font-medium rounded-lg bg-gray-200 text-gray-800 dark:bg-gray-800 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-700 shadow-lg flex items-center justify-center space-x-2">
+            <Button className="btn-disabled mt-8 md:mt-6 w-48 h-16 flex-row px-10 py-4 text-lg font-medium rounded-lg bg-gray-200 text-gray-800 dark:bg-gray-800 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-700 shadow-lg flex items-center justify-center space-x-2">
                 <span>View more </span>
                 <FaArrowRight />
             </Button>
