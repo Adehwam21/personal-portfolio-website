@@ -12,7 +12,7 @@ const Hero: React.FC = () => {
   }
 
   return (
-    <div id="hero-section" className="relative h-120 pt-20 md:pt-16 md:pb-6 flex items-center justify-center bg-gradient-to-r from-gray-100 via-gray-200 to-gray-300 dark:from-gray-800 dark:via-gray-900 dark:to-black text-gray-800 dark:text-gray-100">
+    <div id="hero-section" className="relative h-120 pt-20 md:pt-20 md:pb-6 flex items-center justify-center bg-gradient-to-r from-gray-100 via-gray-200 to-gray-300 dark:from-gray-800 dark:via-gray-900 dark:to-black text-gray-800 dark:text-gray-100">
       {/* Socials Bar */}
       <div>
         <SocialsBar
