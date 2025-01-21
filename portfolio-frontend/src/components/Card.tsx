@@ -1,6 +1,7 @@
 import React from "react";
 import { ICardProps } from "../types";
 import Button from "./Button";
+import { FaArrowRight } from "react-icons/fa6";
 
 const Card: React.FC<ICardProps> = ({ image, title, description, caseStudyPath }) => {
   return (
@@ -24,10 +25,11 @@ const Card: React.FC<ICardProps> = ({ image, title, description, caseStudyPath }
         </div>
         <div className="mt-6 md:mt-3">
           <Button
-            className="px-6 py-3 text-sm md:text-base font-medium text-white bg-indigo-500 dark:bg-indigo-600 rounded-md hover:bg-indigo-600 dark:hover:bg-indigo-700" 
+            className="flex flex-row justify-center items-center px-4 py-3 space-x-2 text-sm md:text-base font-medium text-white bg-indigo-500 dark:bg-indigo-600 rounded-md hover:bg-indigo-600 dark:hover:bg-indigo-700" 
             href={caseStudyPath}
           >
-            Read More
+            <span>Read more </span>
+            <FaArrowRight />
           </Button>
         </div>
       </div>

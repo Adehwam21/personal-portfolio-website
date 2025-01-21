@@ -7,7 +7,7 @@ const ScrollToTopBtn: React.FC = () => {
 
   // Show button when scrolled past a certain point
   const toggleVisibility = () => {
-    if (window.scrollY > 500) {
+    if (window.scrollY > 1000) {
       setIsVisible(true);
     } else {
       setIsVisible(false);
@@ -28,7 +28,7 @@ const ScrollToTopBtn: React.FC = () => {
   return (
     <Button
       onClick={scrollToTop}
-      className={`bg-custom-white border-2 rounded-1 border-custom-blue text-custom-blue fixed bottom-24 right-[-3px] transform transition-transform duration-300 ${isVisible ? 'translate-x-0' : 'translate-x-full'
+      className={`bg-custom-white rounded-1 border-custom-blue text-custom-blue fixed bottom-14 right-5 md:right-7 ${isVisible ? 'flex' : 'hidden'
       } ${
         "bg-gray-200 text-gray-800 hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-200 dark:hover:bg-gray-700"
       }`}

@@ -44,7 +44,7 @@ const Contact: React.FC = () => {
                 <h2 className="font-scode text-4xl md:text-5xl font-extrabold tracking-tight">
                     GET IN TOUCH
                 </h2>
-                <div className="w-32 h-1 mx-auto mt-2 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-full"></div>
+                <div className="w-40 h-1 md:w-44 mx-auto mt-2 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-full"></div>
                 <p className="mt-4 text-lg md:text-xl leading-relaxed text-gray-600 dark:text-gray-300">
                     Whether you have a question, a suggestion, or you just want to say hi, feel free to reach out!
                 </p>
@@ -86,14 +86,14 @@ const Contact: React.FC = () => {
                         <textarea
                             id="message"
                             rows={6}
-                            className="w-full mt-2 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 resize-none overflow-hidden"
+                            className="w-full h-60 mt-2 px-6 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 resize-none"
                             placeholder="Write your message here..."
                             aria-label="Message"
                         ></textarea>
                     </div>
                     <div className="mt-6">
                         <motion.button
-                            whileHover={{ scale: 1.1 }}
+                            whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.9 }}
                             transition={{ type: "spring", stiffness: 400, damping: 10 }}
                             type="submit"

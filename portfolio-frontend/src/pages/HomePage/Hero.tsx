@@ -12,7 +12,7 @@ const Hero: React.FC = () => {
   }
 
   return (
-    <div className="relative h-120 pt-20 md:pt-16 md:pb-6 flex items-center justify-center bg-gradient-to-r from-gray-100 via-gray-200 to-gray-300 dark:from-gray-800 dark:via-gray-900 dark:to-black text-gray-800 dark:text-gray-100">
+    <div id="hero-section" className="relative h-120 pt-20 md:pt-16 md:pb-6 flex items-center justify-center bg-gradient-to-r from-gray-100 via-gray-200 to-gray-300 dark:from-gray-800 dark:via-gray-900 dark:to-black text-gray-800 dark:text-gray-100">
       {/* Socials Bar */}
       <div>
         <SocialsBar
@@ -25,35 +25,23 @@ const Hero: React.FC = () => {
       <div className="h-full text-center flex flex-col items-center px-6 py-5 md:py-16">
         {/* Image with Circular Moving Beam */}
         <div className="relative w-56 h-56 mx-auto mt-10 md:mt-0 mb-6 md:w-60 md:h-60 md:mb-4">
-          {/* Moving Beam */}
-          <motion.div
-            className="absolute inset-0 rounded-full border-8 border-indigo-500 shadow-lg"
-            style={{
-              background: "conic-gradient(from 0deg, #6366F1, #3B82F6, #6366F1)", // Beam gradient
-              maskImage: "radial-gradient(circle, transparent 70%, black 100%)",
-              WebkitMaskImage: "radial-gradient(circle, transparent 70%, black 100%)",
-            }}
-            animate={{
-              rotate: [0, 360], // Full rotation
-            }}
-            transition={{
-              repeat: Infinity, // Infinite rotation
-              duration: 10, // Duration of one rotation
-              ease: "linear", // Smooth continuous motion
-            }}
-          />
-
           {/* Profile Image */}
           <motion.img
             src="images/portrait3.JPG"
             alt="Aaron Kudadjie"
-            className="relative z-10 w-full h-full object-cover rounded-full border-4  border-indigo-500 shadow-lg"
-            whileHover={{
-              y: [0, -10, 0], // Creates a smooth bounce effect
+            className="relative z-10 w-full h-full object-cover rounded-full border-4 border-indigo-500 dark:border-indigo-800 shadow-lg"
+            style={{ filter: "drop-shadow(0 0 20px rgba(99, 102, 241, 0.7))" }} // Initial glow
+            animate={{
+              filter: [
+                "drop-shadow(0 0 20px rgba(99, 102, 241, 0.7))", // Compressed glow
+                "drop-shadow(0 0 40px rgba(99, 102, 241, 0.9))", // Expanded glow
+                "drop-shadow(0 0 20px rgba(99, 102, 241, 0.7))", // Back to initial
+              ],
             }}
             transition={{
-              duration: 1, // Bounce duration
-              ease: "easeInOut",
+              duration: 2, // Total duration of the breathing effect
+              repeat: Infinity, // Infinite loop
+              ease: "easeInOut", // Smooth transition
             }}
           />
         </div>

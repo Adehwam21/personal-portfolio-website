@@ -21,7 +21,7 @@ const Projects: React.FC = () => {
             <motion.div
                 className="absolute top-0 left-0 w-full h-0.5"
                 animate={{
-                x: ["-100%", "100%"], // Move from left to right
+                x: ["100%", "-100%"], // Move right-left
                 }}
                 transition={{
                 repeat: Infinity, // Repeat the animation infinitely
@@ -38,21 +38,21 @@ const Projects: React.FC = () => {
                     PROJECTS
                 </h2>
             <div className="w-32 h-1 mx-auto mt-2 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-full"></div>
-            <p className="mt-4 text-lg md:text-xl text-gray-600 dark:text-gray-300">
-                A collection of some of the most impactful projects I’ve worked on.
-            </p>
+                <p className="mt-4 text-lg md:text-xl text-gray-600 dark:text-gray-300">
+                    A collection of some of the most impactful projects I’ve worked on.
+                </p>
             </div>
 
             <div className="flex flex-col mt-8 space-y-10">
-            {projectData.map((project, index) => (
-                <Card
-                    key={index}
-                    image={project.image}
-                    title={project.title}
-                    description={project.description}
-                    caseStudyPath={project.caseStudyPath}
-                />
-            ))}
+                {projectData.map((project, index) => (
+                    <Card
+                        key={index}
+                        image={project.image}
+                        title={project.title}
+                        description={project.description}
+                        caseStudyPath={project.caseStudyPath}
+                    />
+                ))}
             </div>
 
             <Button className="mt-8 md:mt-6 w-48 h-16 flex-row px-10 py-4 text-lg font-medium rounded-lg bg-gray-200 text-gray-800 dark:bg-gray-800 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-700 shadow-lg flex items-center justify-center space-x-2">
