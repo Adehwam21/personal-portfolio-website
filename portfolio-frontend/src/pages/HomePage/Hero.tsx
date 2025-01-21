@@ -7,7 +7,7 @@ import Button from "../../components/Button";
 const Hero: React.FC = () => {
   const {scrollTo} = useScroll();
   const handleProjectsButoonClicked = () => {
-    // Handle projects button click
+    // Scroll to the projects section
     scrollTo("projects-section");
   }
 

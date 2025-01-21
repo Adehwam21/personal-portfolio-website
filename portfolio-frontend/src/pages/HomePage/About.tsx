@@ -28,16 +28,16 @@ const About: React.FC = () => {
   ];
 
   const handleContactButtonClicked = () => {
-    // Handle contact button click
     scrollTo("contact-section");
   };
 
   const handleResumeButtonClicked = () => {
-    // Download's resume
-    
-
-
-  }
+    const resumeUrl = "files/resume.pdf"; // Path to pdf file
+    const anchor = document.createElement("a");
+    anchor.href = resumeUrl;
+    anchor.download = "Aaron_Kudadjie_Resume.pdf";
+    anchor.click();
+  };
 
   return (
     <div id="about-section" className="relative w-full px-4 md:px-20 flex flex-col justify-center items-center py-20 bg-gradient-to-tr from-white via-gray-50 to-gray-200 dark:from-gray-800 dark:via-gray-900 dark:to-black text-gray-800 dark:text-gray-100">
