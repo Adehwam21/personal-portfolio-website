@@ -4,6 +4,7 @@ import { LuDownload } from "react-icons/lu";
 import Button from "../../components/Button";
 import TechStackIcon from "tech-stack-icons";
 import { useScroll } from "../../context/ScrollContext";
+import AnimatedSection from "../../components/Animator";
 
 const About: React.FC = () => {
   const {scrollTo} = useScroll();
@@ -59,6 +60,7 @@ const About: React.FC = () => {
       />
 
       {/* Section Title */}
+      <AnimatedSection>
       <div className="text-center mt-8">
         <h2 className="font-scode text-4xl md:text-5xl font-extrabold tracking-tight">
           ABOUT ME
@@ -68,54 +70,60 @@ const About: React.FC = () => {
           Get to know more about me, my tools, and skills!
         </p>
       </div>
+      </AnimatedSection>
 
       {/* Content Section */}
       <div className="mx-0 py-0 md:mx-0 mt-12 md:mt-24 md:mb-16 flex flex-col md:flex-row items-start justify-between space-y-8 md:space-y-0 md:space-x-16">
         {/* Left Column: About Information */}
         <div className="mt-2 md:mx-0 md:w-1/2 space-y-6 md:space-y-5">
-          <h3 className="text-xl mb-0 mt-1 md:mt-0 md:text-3xl font-semibold text-indigo-500">
-            Get to know me!
-          </h3>
-          <p className="text-base mt-1 md:text-justify md:text-lg leading-relaxed">
-            I'm a dedicated software engineer with a knack for problem-solving
-            and a love for continuous learning.
-          </p>
-          <p className="text-base mt-1 md:text-justify md:text-lg leading-relaxed">
-            While I dabble in all things code, I specialize in crafting <span className="font-bold"> efficient </span>,
-            <span className="font-bold"> scalable </span>, and <span className="font-bold"> maintainable </span>
-            <span className="font-bold"> backend systems </span> and creating delightful digital experiences. Some
-            might call me a full stack wizard 🧙‍♂️, but I prefer "polymath" (it
-            sounds fancier, right? 😄).
-          </p>
-          <p className="text-base mt-1 md:text-justify md:text-lg leading-relaxed">
-            When I'm not coding, you can find me exploring new tech trends 📱,
-            reading a book 📚, or playing soccer ⚽.
-          </p>
-          <p className="text-base mt-1 md:text-justify md:text-lg leading-relaxed">
-            I'm currently open to new opportunities where I can contribute and
-            grow as a developer. Let's connect and make some magic happen!
-          </p>
+          <AnimatedSection>
+            <h3 className="text-xl mb-0 mt-1 md:mt-0 md:text-3xl font-semibold text-indigo-500">
+              Get to know me!
+            </h3>
+            <p className="text-base mt-1 md:text-justify md:text-lg leading-relaxed">
+              I'm a dedicated software engineer with a knack for problem-solving
+              and a love for continuous learning.
+            </p>
+            <p className="text-base mt-1 md:text-justify md:text-lg leading-relaxed">
+              While I dabble in all things code, I specialize in crafting <span className="font-bold"> efficient </span>,
+              <span className="font-bold"> scalable </span>, and <span className="font-bold"> maintainable </span>
+              <span className="font-bold"> backend systems </span> and creating delightful digital experiences. Some
+              might call me a full stack wizard 🧙‍♂️, but I prefer "polymath" (it
+              sounds fancier, right? 😄).
+            </p>
+            <p className="text-base mt-1 md:text-justify md:text-lg leading-relaxed">
+              When I'm not coding, you can find me exploring new tech trends 📱,
+              reading a book 📚, or playing soccer ⚽.
+            </p>
+            <p className="text-base mt-1 md:text-justify md:text-lg leading-relaxed">
+              I'm currently open to new opportunities where I can contribute and
+              grow as a developer. Let's connect and make some magic happen!
+            </p>
+          </AnimatedSection>
           {/* Buttons */}
-          <div className="flex flex-row justify-start items-center space-x-8 md:justify-start md:flex-row md:space-x-6">
-            <Button 
-              className="mt-5 px-8 py-3 md:h-16 md:w-52 text-lg font-medium rounded-md bg-indigo-500 text-gray-100 dark:bg-indigo-600 dark:text-gray-100 hover:bg-indigo-600 dark:hover:bg-indigo-700 shadow-lg"
-              onClick={handleContactButtonClicked}
-            >
-              Contact
-            </Button>
-            <Button 
-              className="mt-5 md:w-52 md:h-16 flex-row px-6 py-3 text-lg font-medium rounded-lg bg-gray-200 text-gray-800 dark:bg-gray-800 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-700 shadow-lg flex items-center justify-center space-x-2"
-              onClick={handleResumeButtonClicked}
-            >
-              <span>Resume</span> <LuDownload />
-            </Button>
-          </div>
+          <AnimatedSection>
+            <div className="flex flex-row justify-start items-center space-x-8 md:justify-start md:flex-row md:space-x-6">
+              <Button 
+                className="mt-5 px-8 py-3 md:h-16 md:w-52 text-lg font-medium rounded-md bg-indigo-500 text-gray-100 dark:bg-indigo-600 dark:text-gray-100 hover:bg-indigo-600 dark:hover:bg-indigo-700 shadow-lg"
+                onClick={handleContactButtonClicked}
+              >
+                Contact
+              </Button>
+              <Button 
+                className="mt-5 md:w-52 md:h-16 flex-row px-6 py-3 text-lg font-medium rounded-lg bg-gray-200 text-gray-800 dark:bg-gray-800 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-700 shadow-lg flex items-center justify-center space-x-2"
+                onClick={handleResumeButtonClicked}
+              >
+                <span>Resume</span> <LuDownload />
+              </Button>
+            </div>
+          </AnimatedSection>
         </div>
 
         {/* Right Column: Technologies Section */}
         <div className="mx-0 md:mx-0 md:w-1/2 space-y-20">
           {/* Technologies Section */}
           <div>
+            <AnimatedSection>
             <h3 className="text-xl md:pl-3 mb-5 mt-8 md:mt-0 md:text-3xl font-semibold text-indigo-500">
               Tools and technologies
             </h3>
@@ -136,6 +144,7 @@ const About: React.FC = () => {
                 </motion.li>
               ))}
             </ul>
+            </AnimatedSection>
           </div>
         </div>
       </div>
