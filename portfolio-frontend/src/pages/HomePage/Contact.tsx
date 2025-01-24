@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { useScroll } from "../../context/ScrollContext";
 import { toast } from "react-hot-toast";
+import AnimatedSection from "../../components/Animator";
 
 const Contact: React.FC = () => {
     const { setRef } = useScroll();
@@ -40,18 +41,21 @@ const Contact: React.FC = () => {
             />
 
             {/* Section Title */}
-            <div className="text-center mt-12 mb-12">
-                <h2 className="font-scode text-4xl md:text-5xl font-extrabold tracking-tight">
-                    GET IN TOUCH
-                </h2>
-                <div className="w-40 h-1 md:w-44 mx-auto mt-2 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-full"></div>
-                <p className="mt-4 text-lg md:text-xl leading-relaxed text-gray-600 dark:text-gray-300">
-                    Whether you have a question, a suggestion, or you just want to say hi, feel free to reach out!
-                </p>
-            </div>
+            <AnimatedSection>
+                <div className="text-center mt-12 mb-12">
+                    <h2 className="font-scode text-4xl md:text-5xl font-extrabold tracking-tight">
+                        GET IN TOUCH
+                    </h2>
+                    <div className="w-40 h-1 md:w-44 mx-auto mt-2 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-full"></div>
+                    <p className="mt-4 text-lg md:text-xl leading-relaxed text-gray-600 dark:text-gray-300">
+                        Whether you have a question, a suggestion, or you just want to say hi, feel free to reach out!
+                    </p>
+                </div>
+            </AnimatedSection>
 
             {/* Contact Form */}
             <div className="mt-8 md:mt-16 mb-20 w-full max-w-4xl bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 md:p-12">
+                <AnimatedSection>
                 <form onSubmit={sendMail}>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
@@ -106,6 +110,7 @@ const Contact: React.FC = () => {
                         </motion.button>
                     </div>
                 </form>
+                </AnimatedSection>
             </div>
         </div>
     );

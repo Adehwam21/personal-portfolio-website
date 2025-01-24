@@ -17,7 +17,7 @@ const Projects: React.FC = () => {
     }, [setRef]);
     
     return (
-        <AnimatedSection>
+        
         <div id="projects-section" className="relative flex flex-col justify-center items-center px-6 py-16 bg-gradient-to-br from-gray-50 to-gray-200 dark:from-gray-900 dark:to-gray-800 text-gray-800 dark:text-gray-100">
             {/* Light Beam */}
             <motion.div
@@ -35,34 +35,40 @@ const Projects: React.FC = () => {
                     "linear-gradient(90deg, transparent, rgba(255,255,255,0.8), transparent)", // Beam appearance
                 }}
             />
-            <div className="text-center mt-12 mb-12">
-                <h2 className="font-scode text-4xl md:text-5xl font-extrabold tracking-tight">
-                    PROJECTS
-                </h2>
-            <div className="w-32 h-1 mx-auto mt-2 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-full"></div>
-                <p className="mt-4 text-lg md:text-xl text-gray-600 dark:text-gray-300">
-                    A collection of some of the most impactful projects I’ve worked on.
-                </p>
-            </div>
+                <AnimatedSection>
+                    <div className="text-center mt-12 mb-12">
+                        <h2 className="font-scode text-4xl md:text-5xl font-extrabold tracking-tight">
+                            PROJECTS
+                        </h2>
+                        <div className="w-32 h-1 mx-auto mt-2 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-full"></div>
+                        <p className="mt-4 text-lg md:text-xl text-gray-600 dark:text-gray-300">
+                            A collection of some of the most impactful projects I’ve worked on.
+                        </p>
+                    </div>
+                </AnimatedSection>
 
-            <div className="flex flex-col mt-8 space-y-10">
-                {projectData.map((project, index) => (
-                    <Card
-                        key={index}
-                        image={project.image}
-                        title={project.title}
-                        description={project.description}
-                        caseStudyPath={project.caseStudyPath}
-                    />
-                ))}
-            </div>
+                <AnimatedSection>
+                    <div className="flex flex-col mt-8 space-y-10">
+                        {projectData.map((project, index) => (
+                            <Card
+                                key={index}
+                                image={project.image}
+                                title={project.title}
+                                description={project.description}
+                                caseStudyPath={project.caseStudyPath}
+                            />
+                        ))}
+                    </div>
+                </AnimatedSection>
 
-            <Button className="btn-disabled mt-8 md:mt-6 w-48 h-16 flex-row px-10 py-4 text-lg font-medium rounded-lg bg-gray-200 text-gray-800 dark:bg-gray-800 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-700 shadow-lg flex items-center justify-center space-x-2">
-                <span>View more </span>
-                <FaArrowRight />
-            </Button>
+                <AnimatedSection>
+                    <Button className="btn-disabled mt-8 md:mt-6 w-48 h-16 flex-row px-10 py-4 text-lg font-medium rounded-lg bg-gray-200 text-gray-800 dark:bg-gray-800 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-700 shadow-lg flex items-center justify-center space-x-2">
+                        <span>View more </span>
+                        <FaArrowRight />
+                    </Button>
+                </AnimatedSection>
         </div>
-        </AnimatedSection>
+        
     );
 };
 
