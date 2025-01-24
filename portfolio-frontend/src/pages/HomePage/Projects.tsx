@@ -4,6 +4,7 @@ import {motion} from "framer-motion";
 import projectData from "../../assets/projects.json"; // Adjust the path based on your project structure
 import Card from "../../components/Card";
 import Button from "../../components/Button"
+import AnimatedSection from "../../components/Animator"
 import { useScroll } from "../../context/ScrollContext";
 
 
@@ -16,6 +17,7 @@ const Projects: React.FC = () => {
     }, [setRef]);
     
     return (
+        <AnimatedSection>
         <div id="projects-section" className="relative flex flex-col justify-center items-center px-6 py-16 bg-gradient-to-br from-gray-50 to-gray-200 dark:from-gray-900 dark:to-gray-800 text-gray-800 dark:text-gray-100">
             {/* Light Beam */}
             <motion.div
@@ -60,6 +62,7 @@ const Projects: React.FC = () => {
                 <FaArrowRight />
             </Button>
         </div>
+        </AnimatedSection>
     );
 };
 
