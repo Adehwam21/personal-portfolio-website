@@ -33,7 +33,7 @@ const About: React.FC = () => {
   };
 
   const handleResumeButtonClicked = () => {
-    const resumeUrl = "files/resume.pdf"; // Path to pdf file
+    const resumeUrl = "files/Aaron_Kudadjie_Resume.pdf";
     const anchor = document.createElement("a");
     anchor.href = resumeUrl;
     anchor.download = "Aaron_Kudadjie_Resume.pdf";
