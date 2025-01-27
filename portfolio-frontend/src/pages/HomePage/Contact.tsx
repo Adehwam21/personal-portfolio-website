@@ -39,6 +39,7 @@ const Contact: React.FC = () => {
                 body: JSON.stringify(newFormData),
             }).then((res) => {
                 if (res.ok) {
+                    setFormData({ name: "", email: "", message: "" });
                     return res.json();
                 } else {
                     throw new Error("Something went wrong");
