@@ -34,3 +34,10 @@ export interface IScrollContextValue {
 export interface IAnimatorProps{
     children: ReactNode;
 }
+
+
+export interface IContactFormData {
+    name: string;
+    email: string;
+    message: string;
+}
