@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, {useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useScroll } from "../../context/ScrollContext";
 import { toast } from "react-hot-toast";
@@ -6,15 +6,50 @@ import AnimatedSection from "../../components/Animator";
 
 const Contact: React.FC = () => {
     const { setRef } = useScroll();
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        message: ""
+    })
+
+    const mailServerUrl = import.meta.env.VITE_MAIL_SERVER_URL;
 
     useEffect(() => {
         const element = document.getElementById("contact-section");
         setRef("contact-section", element!);
     }, [setRef]);
 
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        const { name, value } = e.target;
+        setFormData((prev) => ({
+            ...prev,
+            [name]: value,
+        }));
+    };
+    
     const sendMail = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        toast.success("Message sent successfully!");
+        const newFormData = { ...formData };
+        toast.promise(
+            fetch(mailServerUrl, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(newFormData),
+            }).then((res) => {
+                if (res.ok) {
+                    return res.json();
+                } else {
+                    throw new Error("Something went wrong");
+                }
+            }),
+            {
+                loading: "Sending...",
+                success: "Message sent successfully!",
+                error: "Failed to send message",
+            }
+        )
         
     };
 
@@ -30,9 +65,9 @@ const Contact: React.FC = () => {
                     x: ["-100%", "100%"], // Move from left to right
                 }}
                 transition={{
-                    repeat: Infinity, // Repeat the animation infinitely
-                    duration: 10, // Total duration of the animation
-                    ease: "linear", // Smooth transition
+                    repeat: Infinity, 
+                    duration: 10, 
+                    ease: "linear", 
                 }}
                 style={{
                     background:
@@ -64,6 +99,9 @@ const Contact: React.FC = () => {
                             </label>
                             <input
                                 type="text"
+                                name="name"
+                                value = {formData.name}
+                                onChange={handleChange}
                                 id="name"
                                 className="w-full mt-2 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
                                 placeholder="Your Name"
@@ -78,6 +116,9 @@ const Contact: React.FC = () => {
                             <input
                                 type="email"
                                 id="email"
+                                name="email"
+                                value={formData.email}
+                                onChange={handleChange}
                                 className="w-full mt-2 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
                                 placeholder="Your Email"
                                 aria-label="Email"
@@ -92,6 +133,9 @@ const Contact: React.FC = () => {
                         <textarea
                             id="message"
                             rows={6}
+                            name="message"
+                            value={formData.message}
+                            onChange={handleChange}
                             className="w-full h-60 mt-2 px-6 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 resize-none"
                             placeholder="Write your message here..."
                             aria-label="Message"
