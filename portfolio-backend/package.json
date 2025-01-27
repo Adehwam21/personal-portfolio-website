@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "description": "The backend server for my portfolio website,just for handling mail services",
   "main": "server.js",
+  
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "dev": "nodemon server.js",
+    "build": "echo 'No build process defined'"
   },
   "keywords": [
     "portfolio-backend"
