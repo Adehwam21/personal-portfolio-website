@@ -52,9 +52,10 @@ const Hero: React.FC = () => {
 
         {/* Title */}
         <AnimatedSection>
-          <h1 className="font-scode text-4xl md:text-5xl font-extrabold tracking-tight leading-snug text-gray-800 dark:text-gray-100">
-            HELLO, I'M AARON KUDADJIE
-          </h1>
+            <h1 className="font-scode text-4xl md:text-5xl font-extrabold tracking-tight leading-snug text-gray-800 dark:text-gray-100">
+              HI, I'M AARON KUDADJIE <span role="img" aria-label="waving hand">👋🏿</span>
+              {/* HI, I'M AARON KUDADJIE <span role="img" aria-label="cool emoji">😎</span> */}
+            </h1>
         </AnimatedSection>
 
         {/* Subtitle */}
