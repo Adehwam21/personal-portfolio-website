@@ -1,6 +1,6 @@
-const transporter  = require('../services/emailService'); // Import your email service
+import transporter from "../services/emailService.js";
 
-const sendEmail = async (req, res) => {
+export const sendEmail = async (req, res) => {
   try {
     // Extract form data from the request body
     const { name, email, message } = req.body;
@@ -24,5 +24,3 @@ const sendEmail = async (req, res) => {
     res.status(500).json({ message: 'An error occurred while sending the email.' });
   }
 };
-
-module.exports = sendEmail;
