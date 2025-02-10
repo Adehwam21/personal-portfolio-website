@@ -55,7 +55,8 @@ const Projects: React.FC = () => {
                                 image={project.image}
                                 title={project.title}
                                 description={project.description}
-                                caseStudyPath={project.caseStudyPath}
+                                tools={project.tools}
+                                githubUrl={project.githubUrl}
                             />
                         ))}
                     </div>
@@ -63,7 +64,7 @@ const Projects: React.FC = () => {
 
                 <AnimatedSection>
                     <Button className="btn-disabled mt-8 md:mt-6 w-48 h-16 flex-row px-10 py-4 text-lg font-medium rounded-lg bg-gray-200 text-gray-800 dark:bg-gray-800 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-700 shadow-lg flex items-center justify-center space-x-2">
-                        <span>View more </span>
+                        <span>Find more</span>
                         <FaArrowRight />
                     </Button>
                 </AnimatedSection>
