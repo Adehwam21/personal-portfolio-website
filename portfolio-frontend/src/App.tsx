@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import HomePage from './pages/HomePage/HomePage';
+import ProjectsPage from './pages/ProjectPage/ProjectsPage';
 import Navbar from './components/Navbar';
 import { ScrollProvider } from './context/ScrollContext';
 import { Toaster } from 'react-hot-toast';
@@ -15,6 +16,7 @@ const App: React.FC = () => {
           <div className="flex-grow">
             <Routes>
               <Route path="/" element={<HomePage />} />
+              <Route path="/projects" element={<ProjectsPage />} />
             </Routes>
           </div>
         </div>
