@@ -42,3 +42,16 @@ export interface IContactFormData {
     email: string;
     message: string;
 }
+
+export interface Project {
+    id: string, 
+    image: string,
+    title: string,
+    description: string,
+    tools: string[],
+    githubUrl: string
+}
+
+export interface SearchProps {
+    dataToFilter: Project[]
+}

@@ -21,7 +21,7 @@ const HomePage: React.FC = () => {
       <div id='home-contact-section'>
           <Contact />
       </div>
-      <div id='home-contact-section'>
+      <div id='home-footer-section'>
           <Footer />
       </div>
         <ScrollToTopBtn />
