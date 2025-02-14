@@ -12,7 +12,7 @@ const Contact: React.FC = () => {
         message: ""
     })
 
-    const mailServerUrl = import.meta.env.VITE_MAIL_SERVER_URL;
+    const mailServerUrl = import.meta.env.VITE_SERVER_URL+"/mail/send-mail";
 
     useEffect(() => {
         const element = document.getElementById("contact-section");
