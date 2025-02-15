@@ -3,36 +3,40 @@
 @tailwind utilities;
 
 :root {
-    --background-color: white;
-    --text-color: black;
-  }
-  
-  [data-theme="dark"] {
-    --background-color: "bg-base-100";
-    --text-color: white;
-  }
-  
-  body {
-    background-color: var(--background-color);
-    color: var(--text-color);
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
-  }
+  --background-color: white;
+  --text-color: black;
+}
 
-  @keyframes borderGlow {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
+[data-theme="dark"] {
+  --background-color: "bg-base-100";
+  --text-color: white;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition:
+    background-color 0.3s,
+    color 0.3s; /* Smooth transition */
+}
+
+@keyframes borderGlow {
+  0% {
+    background-position: 0% 50%;
   }
-  
-  .animate-borderGlow {
-    animation: borderGlow 3s linear infinite; /* Smooth glowing effect */
-    background-size: 200% 200%; /* Gradient scaling for smoothness */
+  50% {
+    background-position: 100% 50%;
   }
-  
-  
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-borderGlow {
+  animation: borderGlow 3s linear infinite; /* Smooth glowing effect */
+  background-size: 200% 200%; /* Gradient scaling for smoothness */
+}
+
+.nav-max {
+  max-width: 2900px;
+}

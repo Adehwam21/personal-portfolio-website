@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import Button from "./Button";
@@ -8,7 +8,9 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { AiOutlineClose } from "react-icons/ai";
 
 const Navbar: React.FC = () => {
-  const [theme, setTheme] = useState(() => localStorage.getItem("theme") || "light");
+  const [theme, setTheme] = useState(
+    () => localStorage.getItem("theme") || "light"
+  );
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -36,57 +38,57 @@ const Navbar: React.FC = () => {
   ];
 
   return (
-    <nav className="fixed w-full flex text-base top-0 right-0 z-50 font-bold justify-between bg-white shadow-lg px-4 md:px-10 h-20 items-center dark:bg-slate-800">
-      {/* Left Section */}
-      <div className="flex md:space-x-3 items-center">
-        {/* Logo */}
-        <div className="flex btn-ghost rounded-md items-center space-x-2">
-          <Link to="/" className="flex items-center space-x-2 p-2 py-3">
-            <img
-              src="images/logo.webp"
-              alt="logo"
-              className="w-8 h-8 object-cover rounded-full shadow-lg"
-            />
-            <span className="text-sm font-fira font-bold">TheKudaCode</span>
-          </Link>
+    <nav className="fixed  w-full flex text-base top-0 right-0 z-50 font-bold justify-between bg-white shadow-lg px-4 md:px-10 h-20 dark:bg-slate-800 items-center">
+      <div className="flex justify-between nav-max mx-auto w-full items-center">
+        {/* Left Section */}
+        <div className="flex md:space-x-3 items-center">
+          {/* Logo */}
+          <div className="flex btn-ghost rounded-md items-center space-x-2">
+            <Link to="/" className="flex items-center space-x-2 p-2 py-3">
+              <img
+                src="images/logo.webp"
+                alt="logo"
+                className="w-8 h-8 object-cover rounded-full shadow-lg"
+              />
+              <span className="text-sm font-fira font-bold">TheKudaCode</span>
+            </Link>
+          </div>
+
+          {/* Theme Toggle Button */}
+          <Button
+            className="btn btn-ghost rounded-full text-xl"
+            onClick={toggleTheme}
+          >
+            {theme === "light" ? <AiOutlineMoon /> : <AiOutlineSun />}
+          </Button>
         </div>
-
-        {/* Theme Toggle Button */}
-        <Button
-          className="btn btn-ghost rounded-full text-xl"
-          onClick={toggleTheme}
-        >
-          {theme === "light" ? <AiOutlineMoon /> : <AiOutlineSun />}
-        </Button>
+        {/* Navigation Links (Hidden on Small Screens) */}
+        <ul className="hidden md:flex space-x-6">
+          {links.map((link) =>
+            link.isScroll ? (
+              <li key={link.href}>
+                <ScrollLink
+                  to={link.href}
+                  smooth={true}
+                  duration={500}
+                  className="text-sm px-4 py-2 rounded-md btn-ghost transition-colors cursor-pointer"
+                >
+                  {link.label}
+                </ScrollLink>
+              </li>
+            ) : (
+              <li key={link.href}>
+                <Link
+                  to={link.href}
+                  className="text-sm px-4 py-2 rounded-md btn-ghost transition-colors"
+                >
+                  {link.label}
+                </Link>
+              </li>
+            )
+          )}
+        </ul>
       </div>
-
-      {/* Navigation Links (Hidden on Small Screens) */}
-      <ul className="hidden md:flex space-x-6">
-        {links.map((link) =>
-          link.isScroll ? (
-            <li key={link.href}>
-              <ScrollLink
-                to={link.href}
-                smooth={true}
-                duration={500}
-                className="text-sm px-4 py-2 rounded-md btn-ghost transition-colors cursor-pointer"
-              >
-                {link.label}
-              </ScrollLink>
-            </li>
-          ) : (
-            <li key={link.href}>
-              <Link
-                to={link.href}
-                className="text-sm px-4 py-2 rounded-md btn-ghost transition-colors"
-              >
-                {link.label}
-              </Link>
-            </li>
-          )
-        )}
-      </ul>
-
       {/* Hamburger Menu Button (Visible on Small Screens) */}
       <Button
         className="btn btn-ghost rounded-full text-2xl md:hidden"
@@ -100,7 +102,9 @@ const Navbar: React.FC = () => {
         <NavMenu
           isOpen={isMenuOpen}
           className={`${
-            theme === "light" ? "bg-gray-100 text-black" : "bg-gray-800 text-white"
+            theme === "light"
+              ? "bg-gray-100 text-black"
+              : "bg-gray-800 text-white"
           }`}
         >
           <ul className="w-full">
