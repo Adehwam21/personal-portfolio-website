@@ -40,3 +40,7 @@ body {
 .nav-max {
   max-width: 2900px;
 }
+
+.projects-page-height {
+  min-height: calc(100vh - 400px);
+}
