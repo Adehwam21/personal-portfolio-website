@@ -33,7 +33,7 @@ const Navbar: React.FC = () => {
   const links = [
     { label: "HOME", href: "/", isScroll: false },
     { label: "ABOUT", href: "about-section", isScroll: true },
-    { label: "PROJECTS", href: "projects-section", isScroll: true },
+    { label: "PROJECTS", href: "/projects", isScroll: false },
     { label: "CONTACT", href: "contact-section", isScroll: true },
   ];
 
